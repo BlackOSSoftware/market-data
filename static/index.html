@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MT5 Market Data Console</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div>
+          <h1>MT5 Market Data Console</h1>
+          <p>Secure WebSocket stream for multi‑symbol ticks and OHLC.</p>
+        </div>
+        <div class="status">
+          <span class="dot" id="statusDot"></span>
+          <span id="statusText">Disconnected</span>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div class="field">
+          <label>Server URL</label>
+          <input id="serverUrl" value="ws://localhost:8000/ws/market" />
+        </div>
+        <div class="field">
+          <label>Symbols (comma separated)</label>
+          <input id="symbols" value="EURUSD,GBPUSD" />
+        </div>
+        <div class="field">
+          <label>Timeframe</label>
+          <input id="timeframe" value="M1" />
+        </div>
+        <div class="field">
+          <label>Interval (ms)</label>
+          <input id="interval" value="200" />
+        </div>
+        <div class="field">
+          <label>API Key</label>
+          <input id="apiKey" placeholder="your secret key" />
+        </div>
+        <div class="actions">
+          <button id="connectBtn">Connect</button>
+          <button id="disconnectBtn" class="ghost" disabled>Disconnect</button>
+        </div>
+        <div class="field">
+          <label>Admin Key (Generate API Key)</label>
+          <input id="adminKey" placeholder="admin key" />
+        </div>
+        <div class="actions">
+          <button id="generateKeyBtn" class="ghost">Generate API Key</button>
+        </div>
+      </section>
+
+      <section class="table">
+        <div class="table-head">
+          <h2>Live Market Data</h2>
+          <div class="meta">
+            <span id="lastUpdate">Last update: —</span>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Bid</th>
+                <th>Ask</th>
+                <th>Open</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Close</th>
+                <th>Time</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="dataBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
