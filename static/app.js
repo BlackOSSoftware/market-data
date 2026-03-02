@@ -74,7 +74,6 @@ function renderRows(items) {
 function connect() {
   const serverUrl = document.getElementById("serverUrl").value.trim();
   const symbols = document.getElementById("symbols").value.trim();
-  const timeframe = document.getElementById("timeframe").value.trim();
   const interval = document.getElementById("interval").value.trim();
   const apiKey = document.getElementById("apiKey").value.trim();
 
@@ -85,7 +84,6 @@ function connect() {
 
   const url = new URL(serverUrl);
   url.searchParams.set("symbols", symbols);
-  if (timeframe) url.searchParams.set("timeframe", timeframe);
   if (interval) url.searchParams.set("interval_ms", interval);
   url.searchParams.set("key", apiKey);
 
@@ -116,15 +114,9 @@ function disconnect() {
 connectBtn.addEventListener("click", connect);
 disconnectBtn.addEventListener("click", disconnect);
 generateKeyBtn.addEventListener("click", async () => {
-  const adminKey = document.getElementById("adminKey").value.trim();
-  if (!adminKey) {
-    alert("Admin key required.");
-    return;
-  }
   try {
-    const res = await fetch("/api/keys/generate", {
+    const res = await fetch("/api/keys/request", {
       method: "POST",
-      headers: { "x-admin-key": adminKey },
     });
     const body = await res.json();
     if (!res.ok) {

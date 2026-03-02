@@ -23,12 +23,17 @@ _runtime_keys = set(settings.api_keys)
 def _load_keys_from_file() -> None:
     if not settings.keys_file.exists():
         settings.keys_file.parent.mkdir(parents=True, exist_ok=True)
+        if not _runtime_keys:
+            _runtime_keys.add(secrets.token_urlsafe(24))
         settings.keys_file.write_text(json.dumps({"keys": sorted(_runtime_keys)}, indent=2))
         return
     try:
         data = json.loads(settings.keys_file.read_text())
         file_keys = {k.strip() for k in data.get("keys", []) if k.strip()}
         _runtime_keys.update(file_keys)
+        if not _runtime_keys:
+            _runtime_keys.add(secrets.token_urlsafe(24))
+            _save_keys_to_file()
     except (OSError, json.JSONDecodeError):
         return
 
@@ -90,6 +95,14 @@ def generate_key(x_admin_key: Optional[str] = Header(default=None)) -> JSONRespo
     return JSONResponse({"api_key": new_key})
 
 
+@app.post("/api/keys/request")
+def request_key() -> JSONResponse:
+    new_key = secrets.token_urlsafe(24)
+    _runtime_keys.add(new_key)
+    _save_keys_to_file()
+    return JSONResponse({"api_key": new_key})
+
+
 def _parse_symbols(raw: Optional[str]) -> List[str]:
     if not raw:
         return []
@@ -112,7 +125,6 @@ def _parse_interval(raw: Optional[str], default_ms: int) -> int:
 async def ws_market(
     websocket: WebSocket,
     symbols: Optional[str] = None,
-    timeframe: Optional[str] = None,
     interval_ms: Optional[str] = None,
     key: Optional[str] = None,
 ) -> None:
@@ -130,7 +142,7 @@ async def ws_market(
         await websocket.close(code=1003)
         return
 
-    tf = timeframe or settings.default_timeframe
+    tf = settings.default_timeframe
     interval = _parse_interval(interval_ms, settings.default_interval_ms)
 
     try:
@@ -143,7 +155,7 @@ async def ws_market(
                 else:
                     payload.append({"symbol": symbol, "error": "symbol_unavailable"})
 
-            await websocket.send_text(json.dumps({"data": payload, "timeframe": tf}))
+            await websocket.send_text(json.dumps({"data": payload}))
 
             if interval > 0:
                 await asyncio.sleep(interval / 1000.0)
