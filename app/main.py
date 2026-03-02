@@ -8,6 +8,10 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, Header, WebSocket, WebSocketDisconnect
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+try:
+    import redis
+except ImportError:  # pragma: no cover - handled at runtime if redis isn't installed
+    redis = None
 
 from .auth import is_admin_key, is_valid_key
 from .mt5_client import MT5Client
@@ -18,6 +22,13 @@ load_dotenv(dotenv_path=".env")
 settings = load_settings()
 mt5_client = MT5Client(settings)
 _runtime_keys = set(settings.api_keys)
+_redis_client = None
+if settings.redis_url and redis is not None:
+    _redis_client = redis.from_url(settings.redis_url, decode_responses=True)
+
+
+def _redis_enabled() -> bool:
+    return _redis_client is not None
 
 
 def _load_keys_from_file() -> None:
@@ -42,6 +53,37 @@ def _save_keys_to_file() -> None:
     settings.keys_file.parent.mkdir(parents=True, exist_ok=True)
     settings.keys_file.write_text(json.dumps({"keys": sorted(_runtime_keys)}, indent=2))
 
+
+def _load_keys_from_redis() -> None:
+    if not _redis_client:
+        return
+    if _runtime_keys:
+        _redis_client.sadd(settings.redis_keys_set, *_runtime_keys)
+    if _redis_client.scard(settings.redis_keys_set) == 0:
+        new_key = secrets.token_urlsafe(24)
+        _redis_client.sadd(settings.redis_keys_set, new_key)
+
+
+def _add_key(key: str) -> None:
+    if not key:
+        return
+    _runtime_keys.add(key)
+    if _redis_enabled():
+        _redis_client.sadd(settings.redis_keys_set, key)
+    else:
+        _save_keys_to_file()
+
+
+def _is_valid_api_key(api_key: str) -> bool:
+    if not api_key:
+        return False
+    if _redis_enabled():
+        try:
+            return bool(_redis_client.sismember(settings.redis_keys_set, api_key))
+        except Exception:
+            return False
+    return is_valid_key(api_key, _runtime_keys)
+
 app = FastAPI(title="MT5 Market Data API", version="1.0.0")
 static_dir = Path(__file__).resolve().parent.parent / "static"
 if static_dir.exists():
@@ -59,7 +101,10 @@ def index():
 @app.on_event("startup")
 def _startup() -> None:
     mt5_client.connect()
-    _load_keys_from_file()
+    if _redis_enabled():
+        _load_keys_from_redis()
+    else:
+        _load_keys_from_file()
 
 
 @app.on_event("shutdown")
@@ -90,16 +135,14 @@ def generate_key(x_admin_key: Optional[str] = Header(default=None)) -> JSONRespo
     if not is_admin_key(x_admin_key or "", admin_key):
         return JSONResponse({"error": "invalid_admin_key"}, status_code=401)
     new_key = secrets.token_urlsafe(24)
-    _runtime_keys.add(new_key)
-    _save_keys_to_file()
+    _add_key(new_key)
     return JSONResponse({"api_key": new_key})
 
 
 @app.post("/api/keys/request")
 def request_key() -> JSONResponse:
     new_key = secrets.token_urlsafe(24)
-    _runtime_keys.add(new_key)
-    _save_keys_to_file()
+    _add_key(new_key)
     return JSONResponse({"api_key": new_key})
 
 
@@ -131,7 +174,7 @@ async def ws_market(
     await websocket.accept()
 
     api_key = key or websocket.headers.get("x-api-key", "")
-    if not is_valid_key(api_key, _runtime_keys):
+    if not _is_valid_api_key(api_key):
         await websocket.send_text(json.dumps({"error": "invalid_api_key"}))
         await websocket.close(code=1008)
         return
