@@ -86,6 +86,10 @@ body {
   gap: 6px;
 }
 
+.field.full {
+  grid-column: 1 / -1;
+}
+
 label {
   font-size: 13px;
   color: var(--muted);
@@ -103,6 +107,31 @@ input {
   display: flex;
   gap: 12px;
   align-items: end;
+  flex-wrap: wrap;
+}
+
+.chip-list {
+  min-height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #0f2038;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 12px;
+}
+
+.chip-empty {
+  color: var(--muted);
 }
 
 button {

@@ -1,6 +1,7 @@
 import os
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Optional
 
 
 def _get_env(name: str, default: str = "") -> str:
@@ -10,7 +11,7 @@ def _get_env(name: str, default: str = "") -> str:
 @dataclass(frozen=True)
 class Settings:
     mt5_path: str
-    mt5_login: int
+    mt5_login: Optional[int]
     mt5_password: str
     mt5_server: str
     api_keys: set[str]
@@ -23,11 +24,15 @@ class Settings:
 
 
 def load_settings() -> Settings:
-    mt5_login_raw = _get_env("MT5_LOGIN", "0")
-    try:
-        mt5_login = int(mt5_login_raw)
-    except ValueError:
-        mt5_login = 0
+    mt5_login_raw = _get_env("MT5_LOGIN", "")
+    mt5_login = None
+    if mt5_login_raw:
+        try:
+            parsed = int(mt5_login_raw)
+            if parsed > 0:
+                mt5_login = parsed
+        except ValueError:
+            mt5_login = None
 
     keys_raw = _get_env("API_KEYS", "")
     api_keys = {k.strip() for k in keys_raw.split(",") if k.strip()}

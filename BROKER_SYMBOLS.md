@@ -1,0 +1,2268 @@
+﻿# Broker Symbols
+
+Generated: 2026-03-04 03:12:51 +05:30
+
+- Source: GET /api/symbols
+- Total symbols (raw): 2258
+- Total symbols (unique): 2258
+
+## All Symbols
+
+- 1INCHUSD.lv
+- 1st Source
+- 1st Trust Global Wind Engy
+- 1st Trust NAS Clean Energy
+- 1st Trust US IPO Index Fund
+- 3D Printing
+- 3D Systems
+- 3I
+- 3M
+- 8X8
+- A O Smith
+- A P MOLLER MAERSK
+- A10 Networks
+- A2A
+- AAK
+- AALBERTS
+- AAON
+- AAR
+- AAVEUSD.lv
+- AB INBEV
+- ABB
+- Abbott Laboratories
+- Abbvie
+- Abercrombie
+- ABM Industries
+- ABN AMRO BANK
+- ABRDN
+- abrdn Physical Plat. Shares
+- Academy Sports and Outdoors
+- Acadia Pharmaceuticals
+- Acadia Realty Trust
+- Accel Entertainment
+- Accenture
+- ACCIONA
+- ACCOR
+- ACHUSD.lv
+- ACI Worldwide
+- ACKERMANS V.HAAREN
+- ACS ACTIVIDADES DE CONSTRUC
+- Acushnet
+- AdaptHealth
+- ADAUSD.lv
+- ADDLIFE
+- ADDTECH
+- Addus HomeCareoration
+- ADECCO
+- Adidas
+- Adient
+- ADMIRAL
+- Adobe
+- Adtalem Global Education
+- Advance Auto Parts
+- Advanced Energy Industries
+- AdvanSix
+- ADYEN
+- AEDIFICA REIT
+- AEGON
+- AENA SME
+- AEROPORTS DE PARIS
+- AeroVironment
+- AES
+- Aeva Technologies
+- Affirm Holdings
+- Aflac
+- AFRY
+- AGEAS
+- Agilent Technologies
+- Agios Pharmaceuticals
+- Agree Realty
+- AHOLD DEL
+- AIG
+- AIR LIQUIDE
+- Air Products Chemicals
+- AirBNB
+- Airbus
+- Akamai Technologies
+- AKER BP
+- AKZO NOBEL
+- Alamo
+- Alarm.com
+- Alaska Air Group
+- Albany International
+- Albemarle
+- Alcoa
+- ALCON
+- Alector
+- Alexander and Baldwin
+- Alexanders
+- Alexandria Real Estate
+- ALFA LAVAL
+- ALGOUSD.lv
+- Alibaba
+- Align Technology
+- Alignment Healthcare
+- ALK-ABELLO
+- Alkami Technology
+- Alkermes
+- Allegheny Technologies
+- Allegiant Travel
+- Allegion
+- ALLEGRO
+- Alliant Energy
+- Allianz
+- Allogene Therapeutics
+- ALLREAL
+- Allstate
+- Alpha and Omega Semi
+- Alphabet
+- Alphatec
+- ALSTOM
+- ALTEN
+- Altria Group
+- AMADEUS IT
+- Amazon
+- Ambarella
+- Ambev
+- AMBU
+- AMC
+- AMC Networks
+- AMD
+- AmEagle
+- Ameren
+- Ameresco
+- AmericaMov
+- American Assets Trust
+- American Electric Power
+- American States Water
+- American Tower
+- American Water Works
+- American Welloration
+- AmericanAir
+- Ameriprise Financial
+- Ameris Bancorp
+- Ametek
+- AMEX
+- Amgen
+- Amicus Therapeutics
+- AMKOR Technology
+- AMN Healthcare Services
+- Amphenol
+- AMPLIFON
+- AMS
+- AMUNDI
+- Analog Devices
+- Anavex Life Sciencesoration
+- Andersons
+- ANDRITZ
+- ANGLO AMERICAN
+- Antero Resources
+- ANTOFAGASTA
+- AO
+- AON
+- Apache
+- Apartment Invst and Mngmt
+- Apellis Pharmaceuticals
+- APEUSD.lv
+- APioration
+- Apogee Enterprises
+- Apollo Commercial Real Est
+- Appfolio
+- Appian
+- Apple
+- Apple Hospitality REIT
+- Applied Digital Corp
+- Applied Industrial Tech
+- AppliedMat
+- Arbor Realty Trust
+- ARCADIS
+- ArcBest
+- ARCELORMITTAL
+- Arch Capital Group
+- Arch Resources
+- ArcherDan
+- Archrock
+- Arcosa
+- Arcturus Therapeutics
+- Arcus Biosciences
+- ARGENX
+- Arista Networks
+- ARKAutoTech
+- ARKEMA
+- ARKFintech
+- ARKGenomRev
+- ARKInnovate
+- ARKInternet
+- ARKSpace
+- AROUNDTOWN
+- Arrowhead Pharmaceuticals
+- Arthur J Gallagher
+- Artisan Partners Asset Mngmt
+- Arvinas
+- Asana
+- Asbury Automotive
+- ASGN
+- ASM INTL
+- ASML
+- ASML Holding
+- Aspen Aerogels
+- ASR NEDERLAND
+- ASSA ABLOY
+- ASSICURAZIONI GENERALI
+- Associated Banc-Corp
+- ASSOCIATED BRITISH FOODS
+- Assurant
+- AST Spacemobile Inc
+- Astec Industries
+- Astrana Health
+- AstraZeneca
+- At And t
+- Atara Biotherapeutics
+- Atkore
+- ATLAS COPCO
+- Atlassian
+- Atmos Energy
+- ATOMUSD.lv
+- ATOS
+- Atricure
+- AU200H6
+- AUDCAD.pr
+- AUDCAD.x
+- AUDCHF.pr
+- AUDCHF.x
+- AUDJPY.pr
+- AUDJPY.x
+- AUDNZD.pr
+- AUDNZD.x
+- AUDSGD.pr
+- AUDSGD.x
+- AUDUSD.pr
+- AUDUSD.x
+- AUS200Roll
+- AUTO TRADER
+- AUTO1
+- Autodesk
+- Automatic Data Processing
+- AUTOSTORE
+- AutoTech
+- Autozone
+- Avalonbaymmunities
+- Avanos Medical
+- AVANZA BANK
+- AVAXUSD.lv
+- Avery Dennison
+- Avient
+- Avis Budget
+- Avista
+- Aviva
+- Avolta
+- AXA
+- Axcelis Technologies
+- Axon Enterprise
+- Axonics
+- Axsome Therapeutics
+- AXSUSD.lv
+- AZZ
+- BACHEM
+- Badger Meter
+- BAE
+- Baidu
+- Baker Hughes
+- BAKKAFROST
+- Balchem
+- Ball
+- Banc of California
+- Bancfirst
+- BANCO BILBAO VIZCAYA ARG
+- BANCO BPM
+- BANCO DE SABADELL
+- Bancorp
+- BandG Foods
+- BandM EUROPEAN VALUE RETAIL
+- Bandwidth
+- BANK OF IRELAND
+- Bank of New York Mellon
+- BankAmerica
+- BANKINTER
+- BankUnited
+- Banner
+- Barclays
+- BARRATT DEVELOPMENTS
+- Barrick
+- BARRY CALLEBAUT
+- BASF
+- BAT
+- Bath Body Works
+- BATUSD.lv
+- BAWAG
+- Baxter International
+- Bayer
+- BCHUSD.lv
+- BE SEMICONDUCT
+- Beacon Roofing Supply
+- Beam Therapeutics
+- Beauty Health Company
+- BECHTLE
+- Becton Dickinson
+- BedBath
+- BEIERSDORF
+- BEIJER REF
+- Belden
+- BELIMO
+- Bellring Brands
+- BELLWAY
+- BERKELEY THE
+- Berkshire Hills Bancorp
+- Berkshire.H
+- BerkshireH
+- Best Buy
+- Beyond
+- BeyondMeat
+- BGC Partners
+- BIG YELLOW REIT
+- BigBearai
+- BigCommerce
+- BILLERUDKORSNAS
+- Bio Rad Laboratories
+- Bio Techne
+- Biocryst Pharmaceuticals
+- Biogen
+- Biohaven Pharmaceutical
+- Biolife Solutions
+- Biomarin Pharmaceutical
+- BIOMERIEUX
+- BioNtech
+- Bitdeer Technologies Group
+- BJ`s Wholesale Club
+- Black Hillsoration
+- Blackbaud
+- Blackberry
+- BlackLine
+- Blackstone Mortgage Trust
+- Blink
+- Bloom Energy
+- Bloomin Brands
+- BMW
+- BNBUSD.lv
+- BOBLH6
+- Boeing
+- Boise Cascade Co
+- BOLIDEN
+- BOLLORE
+- Booking
+- Boot Barn
+- Borgwarner
+- Boston Properties
+- Boston Scientific
+- BOUYGUES
+- Box
+- BP
+- Bradesco
+- Brady
+- Brandywine Realty Trust
+- BRENNTAG
+- BridgeBio Pharma
+- BRIDGEPOINT
+- BrightSphere Investment
+- BrightSpire Capital
+- BrightView
+- Brinker International
+- Brinks
+- Bristol Myers Squibb
+- BRITISH LAND REIT
+- BRITVIC
+- Broadcom
+- Broadridge Financial
+- Broadstone Net Lease
+- Brown Brown
+- Brown Forman
+- BRP
+- BT
+- BTCUSD.lv
+- BTCXAU.lv
+- BUCHER INDUSTRIES
+- Buckle
+- Bumble
+- BUNDH6
+- BUNZL
+- BURBERRY
+- BUREAU VERITAS
+- Butterfly Network
+- C4 Therapeutics
+- Cabot
+- Cactus
+- CADCHF.pr
+- CADCHF.x
+- Cadence Design
+- CADJPY.pr
+- CADJPY.x
+- CADSGD.pr
+- CADSGD.x
+- CAIXABANK
+- California Resourcesoration
+- California Water Service
+- Calix
+- Cal-Maine Foods
+- Camden Property Trust
+- Campbell
+- Camping World
+- Cannae
+- Canopy
+- CAPGEMINI
+- Capital One Financial
+- Capitol Federal Financial
+- CARBONZ6
+- Cardinal Health
+- Cardlytics
+- Caredx
+- CarGurus
+- CARL ZEISS MEDITEC
+- CARLSBERG
+- Carmax
+- Carnival
+- Carpenter Technology
+- CARREFOUR
+- Carrier
+- Cars.com
+- Casella Waste Systems
+- Cassava Sciences
+- CASTELLUM
+- Castle Biosciences
+- CAT
+- Cathay General Bancorp
+- Cavco Industries
+- Cbiz
+- Cboe Global Markets
+- Cbre Group A
+- CCFemsa
+- CD PROJEKT
+- CDW
+- Celanese
+- Celldex Therapeutics
+- CELLNEX TELECOM
+- Celsius
+- Cemex
+- Centene
+- Centerpoint Energy
+- Centerspace
+- Central Garden and Pet
+- Centrica
+- Century Aluminum
+- Century Communities
+- Cerence
+- Cerevel Therapeutics
+- Cerus
+- CF
+- CFXUSD.lv
+- CH Robinson Worldwide
+- Charles River Laboratories
+- Charles Schwab
+- Chart Industries
+- Charter Communications
+- Cheesecake
+- Chefs Warehouse
+- Chesapeake Energy
+- Chesapeake Utilities
+- Chevron
+- Chewy
+- CHFJPY.pr
+- CHFJPY.x
+- Childrens Place
+- Chimera Investment
+- CHINA50H6
+- CHINA50Roll
+- Chipotle
+- CHRISTIAN DIOR SE
+- CHshares
+- Chubb
+- Church Dwight
+- CHZUSD.lv
+- Cimpress
+- Cincinnati Financial
+- Cinemark
+- Cintas
+- Cipher Mining Inc
+- Cisco
+- Citigroup
+- Citizens Financial Group
+- City
+- CLARIANT
+- Clean Energy Fuels
+- CleanSpark Inc
+- Clear Channel Outdoor
+- Clearway Energy
+- Cleveland
+- Clorox
+- CLOSE BROS
+- CME
+- Cms Energy
+- CNO Financial
+- CNX Resources
+- Coca-Cola
+- Coca-Cola Consolidated
+- Codexis
+- Coeur Mining
+- COFFEEK6
+- COFFEERoll
+- COFINIMMO REIT
+- Cogent Communications
+- Cognizant Technology
+- Cohen and Steers
+- Coherus Biosciences
+- Cohu
+- Coinbase
+- Colgate Palmolive
+- COLOPLAST
+- COLRUYT
+- Columbia Banking System
+- Columbus Mckinnon
+- Comcast
+- Comfort Systems USA
+- Commercial Metals
+- COMMERZBANK
+- Community Health Systems
+- Community Healthcare Trust
+- Commvault Systems
+- COMPASS
+- Compass Minerals
+- COMPUSD.lv
+- Comstock Resources
+- Conagra Brands
+- Conduent
+- Conmed
+- ConnectOne Bancorp
+- Conocophillips
+- Consolidated Edison
+- Constellation Brands
+- Constellation Energy
+- Constellium SE
+- Construction Partners
+- CONTINENTAL
+- CONVATEC
+- CopaHolding
+- Copart
+- Corcept Therapeutics
+- Core Scientific Inc
+- CoreCivic
+- Corning
+- Corpay
+- Corporate Office Props Trust
+- Corsair Gaming
+- Corteva
+- Corvel
+- Costamare
+- CoStar Group
+- Costco
+- Coterra Energy
+- COTTONK6
+- Coupang
+- Coursera
+- COVESTRO AG
+- COVIVIO
+- Cracker Barrel Old Country
+- CREDIT AGRICOLE
+- Cresud
+- CRH
+- Crinetics Pharmaceuticals
+- Crocs
+- CRODA INTERNATIONAL
+- Crowdstrike
+- Crown Castle
+- CRVUSD.lv
+- CryoPort
+- CSG Systems International
+- CSW Industrials
+- CSX
+- CTS
+- CTS EVENTIM
+- Cummins
+- CVB Financial
+- CVR Energy
+- CVS
+- CVXUSD.lv
+- Cytokinetics
+- D IETEREN
+- D R Horton
+- Daimler
+- DAIMLER TRUCK
+- Dana
+- Danaher
+- DANONE
+- DANSKE BANK
+- Darden Restaurants
+- DASHUSD.lv
+- DASSAULT SYSTEM
+- Datadog
+- Dave and Busters Ent
+- DAVIDE CAMPARI MILANO
+- Davita
+- DCC
+- DE40H6
+- DE40Roll
+- Deere
+- Delek US
+- DELIVERY HERO
+- Delta
+- Deluxe
+- DEMANT
+- Denali Therapeutics
+- Dentsply Sirona
+- DERWENT LONDON REIT
+- Desktop Metal
+- Despegar
+- DEUTSCHE BANK
+- DEUTSCHE BOERSE
+- DEUTSCHE POST
+- Devon
+- Dexcom
+- Diageo
+- Diamondback Energy
+- Diamondrock Hospitality
+- DIASORIN
+- Digital Realty Trust
+- DigitalBridge
+- DigitalOcean
+- Dillards
+- Dine Brands Global
+- DINO POLSKA
+- Diodes
+- DIPLOMA
+- Disney
+- DNB BANK
+- Docusign
+- DOGEUSD.lv
+- Dollar General
+- Dollar Tree
+- DOMETIC
+- Dominion Energy
+- Dominos Pizza
+- Domo
+- Donnelley Financial
+- Dorman Products
+- DOTUSD.lv
+- Dover
+- Dow
+- DR. MARTENS
+- DraftKings
+- Dropbox
+- DSV
+- DTE Energy
+- DTEGY
+- Duke Energy
+- Dupont De Nemours
+- D-Wave Quantum
+- Dxc Technology
+- Dycom Industries
+- DYDXUSD.lv
+- e.l.f. Beauty
+- E.W. Scripps
+- Eagle Bancorp
+- Earts
+- Eastgroup Properties
+- Eastman Chemical
+- EasyJet
+- Eaton
+- eBay
+- Ecolab
+- Ecopetrol
+- EDENRED
+- Edgewell Personal Care
+- Edison International
+- Editas Medicine
+- EDP
+- EDP RENOVAVEIS
+- Edwards Lifesciences
+- EIFFAGE
+- ELECTROLUX
+- ELEKTA
+- Elevance Health
+- Eli Lilly
+- ELIA
+- ELIS
+- ELISA
+- Emcor
+- Emergent Biosolutions
+- Emerson Electric
+- Empire State Realty Trust
+- Employers
+- EMS-CHEMIE
+- ENAGAS
+- Enanta Pharmaceuticals
+- Encore Capital
+- ENDESA
+- ENEL
+- Energizer
+- Energy Recovery
+- Enerpac Tool
+- Enersys
+- ENGIE
+- ENI
+- ENJUSD.lv
+- Enova International
+- Enphase
+- EnPro Industries
+- Ensign
+- ENSUSD.lv
+- ENTAIN
+- Entergy
+- Enterprise Financial Servs
+- Envestnet
+- Enviri
+- Eog Resources
+- EON
+- Epamtems
+- EPIROC
+- EQT
+- Equifax
+- Equinix
+- EQUINOR
+- Equity Residential
+- ERICSSON
+- ERSTE BANK
+- Esco Technologies
+- ESP35H6
+- ESP35Roll
+- Essent
+- Essential Props Realty Trust
+- Essex Property Trust
+- ESSILORLUXOTTICA
+- ESSITY AKTIEBOLAG
+- Estee Laudermpanies
+- ETCUSD.lv
+- ETHUSD.lv
+- Etsy
+- EU50Roll
+- EURAUD.pr
+- EURAUD.x
+- EURAZEO
+- EURCAD.pr
+- EURCAD.x
+- EURCHF.pr
+- EURCHF.x
+- EURGBP.pr
+- EURGBP.x
+- EURGBPfuture
+- EURJPY.pr
+- EURJPY.x
+- EURMXN.pr
+- EURMXN.x
+- EURNOK.pr
+- EURNOK.x
+- EURNZD.pr
+- EURNZD.x
+- EUROFINS
+- EURONEXT
+- EURPLN.pr
+- EURPLN.x
+- EURSEK.pr
+- EURSEK.x
+- EURSGD.pr
+- EURSGD.x
+- EURUSD.pr
+- EURUSD.x
+- EURUSDfuture
+- EURZAR.pr
+- EURZAR.x
+- Eventbrite
+- Everest Re Group
+- Evergy
+- Everi
+- Eversource Energy
+- Evertec
+- Evolent Health
+- EVOLUTION
+- EVONIK INDUSTRIES
+- EVOTEC
+- Exelon
+- Exlservice Hldgs
+- eXp World
+- Expedia
+- Expeditors Wash
+- EXPERIAN
+- Exponent
+- Extra Space Storage
+- Extreme Networks
+- Exxon
+- F5
+- FABEGE
+- Fabrinet
+- Facebook
+- Factset Researchtems
+- Fair Isaac
+- Fastenal
+- FASTIGHETS BALDER
+- Fastly
+- Fate Therapeutics
+- FB Financial
+- FDJ
+- Federal Agricultural Mrtg
+- Federal Realty Invs Trust
+- Federal Signal
+- Federated Hermes
+- FedEx
+- FERGUSON
+- Ferrari
+- FERROVIAL
+- FibroGen
+- FIDAUSD.lv
+- Fidelity National Info Serv
+- Fifth Third Bancorp
+- FILUSD.lv
+- FINECO BANK
+- First Bancorp PR
+- First Busey
+- First Commonwealth Financial
+- First Financial Bancorp
+- First Interstate BancSystem
+- First Merchants
+- FirstCash
+- Firstenergy
+- FirstSolar
+- Fiverr
+- FLOWUSD.lv
+- FLUGHAFEN ZUERICH
+- FLUIDRA
+- Fluororation
+- FMC
+- Ford
+- FormFactor
+- Forrester Research
+- Fortinet
+- Fortive
+- FORTUM
+- FORVIA
+- Forward Air
+- Four Corners Property Trust
+- Fox
+- Fox Class A
+- Fox Factory
+- FRA40H6
+- FRA40Roll
+- Franklin Electric
+- Franklin Resources
+- FREENET
+- Freeport
+- FRESENIUS
+- FRESENIUS MEDICAL CARE
+- Fresh Del Monte Produce
+- Frontier
+- Frontline
+- FuboTV
+- FUCHS PETROLUB PRF
+- FuelCell
+- Fulgent Genetics
+- Fulton Financial
+- FUTURE
+- GALAUSD.lv
+- GALENICA
+- GALP ENERGIA-NOM
+- GALUSD.lv
+- GAMES WORKSHOP
+- Garmin
+- Gartner
+- GATX
+- GAUCNH.pr
+- GAUCNH.x
+- GAUUSD.pr
+- GAUUSD.x
+- GBL
+- GBPAUD.pr
+- GBPAUD.x
+- GBPCAD.pr
+- GBPCAD.x
+- GBPCHF.pr
+- GBPCHF.x
+- GBPJPY.pr
+- GBPJPY.x
+- GBPNOK.pr
+- GBPNOK.x
+- GBPNZD.pr
+- GBPNZD.x
+- GBPSEK.pr
+- GBPSEK.x
+- GBPSGD.pr
+- GBPSGD.x
+- GBPUSD.pr
+- GBPUSD.x
+- GBPUSDfuture
+- GBPZAR.pr
+- GBPZAR.x
+- GCJ6
+- Ge Healthcare Technology
+- GEA
+- GEBERIT
+- GECINA
+- Gendigital
+- GenElectric
+- Generac
+- General Dynamics
+- General Mills
+- GENMAB
+- GenMotors
+- Gentherm
+- Genuine Parts
+- GENUS
+- Genworth Financial
+- Gerdau
+- GERRESHEIMER
+- GETINGE
+- GETLINK
+- Getty Realty
+- Gibraltar Industries
+- G-III Apparel
+- Gilead
+- GILTM6
+- GIVAUDAN
+- GJENSIDIGE FORSIKRING
+- Glacier Bancorp
+- GLANBIA
+- Glaukosoration
+- GlaxoSmith
+- Glencore
+- Global Industrial
+- Global Medical REIT
+- Global Net Lease
+- Global Payments
+- Global x Autos and Evs
+- Global X Copper Miners
+- Globalfoundries
+- Globalstar
+- Globant
+- Globe Life
+- GMTUSD.lv
+- GN STORE
+- Gogo
+- Golar Lng
+- Golden Entertainment
+- Goldmans
+- Goodyear Tire and Rubber
+- Goosehead Insurance
+- GoPro
+- GrafTech International
+- GRAFTON UNT
+- Graham
+- Granite Construction
+- Gray Television
+- Green Brick Partners
+- Green Dot
+- Green Plains
+- Greenbrier Cos
+- GREGGS
+- Greif
+- Grid Dynamics
+- Griffon
+- GRIFOLS  CL A
+- Group 1 Automotive
+- GRTUSD.lv
+- GrupoAreo
+- GrupoAval
+- Guess
+- H.B. Fuller Company
+- Haemonetics
+- Halliburton
+- HALMA
+- Halozyme Therapeutics
+- Hamilton Lane
+- Hancock Whitney
+- HandE Equipment Services
+- Hannon Armstrong
+- HANNOVER RUECK
+- HARGREAVES LANSDOWN
+- Harmonic
+- Harmony Biosciences
+- Hartford Financial
+- Hasbro
+- HAYS
+- HBARUSD.lv
+- HCA Healthcare
+- HDFCBank
+- Health Catalyst
+- Healthcare Realty Trust
+- Healthcare Services
+- Healthequity
+- Healthpeak Properties
+- Heartland Express
+- Hecla Mining
+- HEIDELBERGCEMENT
+- HEINEKEN
+- Helen of Troy
+- Helios Technologies
+- HELLOFRESH
+- Helmerich and Payne
+- HELVETIA
+- HENKELand KGAA PRF
+- HENNES and MAURITZ
+- Henry Schein
+- HERA
+- Hermes
+- Hershey
+- Hess
+- Hewlett Packard Enterprise
+- HEXAGON
+- HEXPOL
+- HGK6
+- Hikma
+- Hilltop
+- Hilton
+- Hilton Grand Vacations
+- HISCOX
+- HK50H6
+- HK50Roll
+- HNI
+- HOLCIM
+- HOLMEN
+- Hologic
+- Home Bancshares
+- HomeDepot
+- Honeywell International
+- Hope Bancorp
+- Horace Mann Educators
+- Hormel
+- Host Hotels Resorts
+- Houlihan Lokey
+- HOWDEN JOINERY
+- Howmet Aerospace
+- HP
+- HSBC
+- Hub
+- HUHTAMAKI
+- Humana
+- Hunt Transport
+- Huntington Bancshares
+- Huntington Ingalls
+- Huron Consulting
+- HUSQVARNA
+- Hyatt
+- Hyliionoration
+- IAC Inc
+- IAG
+- IBERDROLA
+- IBM
+- ICAP
+- ICF International
+- Ichor
+- ICICI
+- ICPUSD.lv
+- IDEX
+- IDEXX Laboratories
+- iHeartMedia
+- Illinois Tool Works
+- Illumina
+- Imax
+- IMCD
+- IMI
+- ImmunityBio
+- IMPERIAL BRANDS
+- Impinj
+- IMXUSD.lv
+- Inari Medical
+- INCHCAPE
+- Incyte
+- Independence Realty Trust
+- Independent Bank
+- INDITEX
+- Industrial Logistics
+- INDUSTRIVARDEN
+- INDUTRADE
+- INFINEON TECHNOLOGIES
+- Infinera
+- INFORMA
+- Infosys
+- Ingersoll Rand
+- Ingevity
+- Ingles Markets
+- INJUSD.lv
+- INMOBILIARIA COLONIAL
+- Innospec
+- InnovAge
+- Innovative Industrial Props
+- Innoviva
+- Inovio Pharmaceuticals
+- Insight Enterprises
+- Insmed
+- Insperity
+- Inspire Medical Systems
+- Installed Building Products
+- Insulet
+- Intel
+- Intellia Therapeutics
+- Inter Parfums
+- Intercontinental Exchange
+- INTERCONTINENTAL HOTELS
+- Interdigital
+- INTERMEDIATE CAPITAL
+- International Bancshares
+- International Paper
+- Interpublic Group
+- INTERPUMP
+- INTERROLL
+- INTERTEK
+- INTESA SANPAOLO
+- INTL CONSOLIDATED AIRLINES
+- Intl Flavors Fragrances
+- Intuit
+- Intuitive Surgical
+- Invesco
+- Invesco China Technology
+- Invesco Defensive Equity
+- Invesco QQQ Trust
+- Invesco Solar
+- INVESTOR
+- Invitation Homes
+- INWIT
+- IONQ Inc
+- IOTAUSD.lv
+- IPSEN
+- IQVIA
+- iRhythm Technologies
+- Iridium
+- Irobot
+- Iron Mountain
+- Ironwood Pharmaceuticals
+- iShareCEETF
+- iShares 1-3yr Bond
+- iShares 20yr + Bond
+- iShares 3-7yr Bond
+- iShares 7-10yr Bond
+- iShares Biotech
+- iShares Bitcoin Trust
+- iShares China Large
+- iShares Core MSCI Emg Mrkts
+- iShares Core SP 500
+- iShares Cybersecurity Tech
+- iShares Ethereum Trust
+- iShares Global Tech
+- iShares Gold Trust
+- iShares High Yield Corp Bond
+- iShares Inv Grade Corp Bond
+- iShares MBS
+- iShares MSCI Brazil Capped
+- iShares MSCI Chile Capped
+- iShares MSCI China
+- iShares MSCI Mexico Capped
+- iShares MSCI Taiwan
+- iShares PHLX Semicdtr
+- iShares Robotics and AI
+- iShares Russell 2000
+- iShares Silver Trust
+- iShares Small SP Small Cap
+- iShares US Aero and Defense
+- iShares US Aggreg Bond
+- iShares US Energy
+- iShares US Fin Servs
+- iShares US Healthcare
+- iShares US Medi Devices
+- iShares US Oil and Gas EP
+- iShares US Oil Eqmt Servs
+- ISS
+- ITALGAS
+- Itau
+- Itron
+- ITV
+- IVECO
+- IWG
+- J.MARTINS SGPS
+- Jack Henry Associates
+- Jack In The Box
+- Jacobs Solutions
+- JandJ Snack Foods
+- JD
+- JD SPORTS FASHION
+- JDE PEETS
+- JELD-WEN
+- JFrog
+- JJ
+- JM Smucker
+- John Bean Technologies
+- Johnson Controls
+- JohnsonMatt
+- JohnWood
+- JP225Roll
+- JPM EM Mkts Bond
+- JPMorgan
+- JSTUSD.lv
+- JULIUS BAER
+- Jumia
+- JUST EAT TAKEAWAY
+- Kadant
+- Kaiser Aluminum
+- KAR Auction Services
+- KAUCNH.pr
+- KAUCNH.x
+- KAUUSD.pr
+- KAUUSD.x
+- KB Home
+- KBC
+- KBR
+- Kennametal
+- Kennedy-Wilson
+- Kering
+- Keros Therapeutics
+- KERRY
+- KESKO
+- Keurig Dr Pepper
+- Keycorp
+- Keysight Technologies
+- Kforce
+- Kimberly
+- Kimco Realty
+- Kinder Morgan
+- KINGFISHER
+- KINGSPAN
+- KINNEVIK
+- Kinsale Capital
+- KION
+- Kite Realty Trust
+- KKR Real Estate Fince Trust
+- KLA
+- KLEPIERRE REIT
+- KNCUSD.lv
+- KNORR BREMSE
+- Knowles
+- Kodiak Sciences
+- KOJAMO
+- KONE
+- Kontoor Brands
+- Korn Ferry
+- Kosmos Energy
+- KPN KON
+- Kraft Heinz
+- Kratos Defense and Security
+- Kroger
+- Kronos Worldwide
+- Krystal Biotech
+- KUEHNE and NAGEL
+- Kulicke and Soffa Industries
+- Kymera Therapeutics
+- L3harris Technologies
+- Ladder Capital
+- Lakeland Financial
+- Lam Research
+- Lamb Weston
+- Lancaster Colony
+- LAND SECURITIES REIT
+- Lantheus
+- LANXESS
+- Las Vegas Sands
+- Latham
+- LATOUR INVESTMENT
+- Lattice Semiconductor
+- La-Z-Boy
+- LCI Industries
+- LDOUSD.lv
+- LEG IMMOBILIEN
+- LegalGen
+- LEGRAND
+- Leidos
+- LendingClub
+- LendingTree
+- Lennar
+- LEONARDO
+- LGI Homes
+- Li Auto
+- Liberty Latin America
+- Liberty Media
+- Liberty Oilfield Services
+- LIFCO
+- Ligand Pharmaceuticals
+- Lincoln National
+- Lindsayoration
+- LINKUSD.lv
+- LivaNova
+- Live Nation Entertainment
+- Live Oak Bancshares
+- Liveperson
+- LiveRamp
+- LKQ
+- Lloyds
+- Lockheed Martin
+- Loews
+- LOGITECH
+- LONDON STOCK EXCHANGE
+- LONDONMETRIC PROPERTY REIT
+- LONZA
+- Loreal
+- Lowe
+- LPTUSD.lv
+- LRCUSD.lv
+- LTC Properties
+- LTCUSD.lv
+- Lucid
+- Lufthansa
+- Lululemon Athletica
+- LUNDBERGFORETAGEN
+- LVMH
+- LXP Industrial Trust
+- Lyondell
+- M T Bank
+- Macerich
+- Madison Square Garden Ent
+- Madrigal Pharmaceuticals
+- Magnite
+- Magnolia Oil and Gas
+- Malibu Boats
+- MAN
+- MANAUSD.lv
+- MandG
+- Mannkind
+- Mapfre
+- Marathon Digital
+- Marathon Petroleum
+- Marcus and Millichap
+- Marinemax
+- Marketaxess
+- Marriott
+- Marsh Mclennans
+- Marten Transport
+- Martin Marietta Materials
+- MarvellTech
+- Masco
+- Masonite International
+- Mastercard
+- Matador Resources
+- Match Group
+- Materion
+- Matson
+- Matthews International
+- Maximus
+- MaxLinear
+- Mccormick
+- McDonalds
+- McGrath Rentcorp
+- McKesson
+- Medifast
+- MEDIOBANCA BANCA DI CREDITO
+- MEDNAX
+- Medpace
+- Medtronic
+- MELI
+- MELROSE INDUSTRIES
+- Merchants Bancorp
+- Merck
+- Merit Medical Systems
+- Meritage Homes
+- MERLIN PROPERTIES REIT
+- Mesa Laboratories
+- Meta Financial
+- Methode Electronics
+- Metlife
+- Mettler Toledo International
+- MFA Financial
+- MGE Energy
+- MGM
+- MI Homes
+- MICHELIN
+- Microchip Technology
+- Micron
+- Microsoft
+- MicroStrat
+- Mid America Apartment
+- Middlesex Water
+- MINAUSD.lv
+- Minerals Technologies
+- MIPS
+- Mission Produce
+- Moderna
+- ModivCare
+- Moelis and Co
+- Mohawks
+- Molina Healthcare
+- Molsonors Beverage
+- Monarch Casino and Resort
+- MONCLER
+- Mondelez International
+- Mondi
+- MongoDB
+- Monolithic Powertems
+- Monro
+- Monster Beverage
+- Montrose Environmental
+- Moodys
+- MorgStanley
+- Mosaic
+- Motorola Solutions
+- MP Materialsoration
+- MS
+- MSCI
+- MTU AERO ENGINES
+- Mueller Industries
+- Mueller Water Products
+- MultiPlan
+- Murphy Oil
+- MXNJPY.pr
+- MXNJPY.x
+- MYR
+- Myriad Genetics
+- Nano Nuclear Energy Inc
+- Nanostring Technologies
+- Nasdaq
+- NatGrid
+- National Bank
+- National Beverage
+- National Health Investors
+- National Research
+- National Storage Affiliates
+- National Vision
+- NATURGY ENERGY
+- Navient
+- NBT Bancorp
+- NEA BANK
+- NEARUSD.lv
+- Nebius Group NV
+- Nelnet
+- NEMETSCHEK
+- Neogen
+- Neogenomics
+- NEOUSD.lv
+- NESTE
+- NESTLE
+- NetApp
+- NETCOMPANY
+- Netflix
+- Netscout Systems
+- New Fortress Energy
+- New Jersey Resourcesoration
+- New York Mortgage Trust
+- Newell Brands
+- Newmark
+- Newmont
+- News Class A
+- News Class B
+- NEXI
+- NexPoint Residential Trust
+- NEXT
+- NextEra
+- NGJ6
+- NIBE INDUSTRIER
+- NIC SEMICONDUCTOR
+- NIKE
+- NIO
+- NiSource
+- NL25Roll
+- NMI
+- NN
+- NOKIA
+- NOKIAN RENKAAT
+- NOKJPY.pr
+- NOKJPY.x
+- NOKSEK.pr
+- NOKSEK.x
+- Nordson
+- Norfolk Southern
+- NORSK HYDRO
+- Northern Trust
+- Northrop Grumman
+- Northwest Bancshares
+- Northwest Natural
+- Northwestern
+- NORWAY25Roll
+- NorwCruise
+- Novagold Resources
+- Novanta
+- Novartis
+- Novartis AG
+- NOVO NISK
+- NOVONESIS
+- NRG Energy
+- Nu Skin Enterprises
+- Nucor
+- Nurix Therapeutics
+- Nuscale Power
+- Nuvation Bio
+- NVIDIA
+- NVR
+- NXP Semiconductors NV
+- NZDCAD.pr
+- NZDCAD.x
+- NZDCHF.pr
+- NZDCHF.x
+- NZDJPY.pr
+- NZDJPY.x
+- NZDSGD.pr
+- NZDSGD.x
+- NZDUSD.pr
+- NZDUSD.x
+- OCADO
+- Oceaneering International
+- OceanFirst Financial
+- Office Propertiesome Trust
+- OFG Bancorp
+- Old Dominion Freight Line
+- Old National Bancorp
+- Omega Flex
+- Omnicell
+- Omnicom Group
+- OMUSD.lv
+- OMV
+- ON Semiconductor
+- ONE Gas
+- Oneok
+- Onto Innovation
+- Open Lending
+- Opko Health
+- Option Care Health
+- OPUSD.lv
+- Oracle
+- ORANGE
+- OReilly Automotive
+- Organogenesis
+- Organon
+- ORION
+- Orion Engineered Carbons
+- ORKLA
+- ORSTED
+- OrthoPediatrics
+- Oscar Health
+- OSI Systems
+- Otis Worldwide
+- Otter Tailoration
+- Outfront Media
+- Outset Medical
+- Ovintiv
+- Owens and Minor
+- OXF NANOPORE TECHNOLOGIES
+- Oxford Industries
+- OXY
+- P G E
+- Paccar
+- Pacific Biosciences of CA
+- Pacira BioSciences
+- Packaging of America
+- Pagerduty
+- Palantir
+- Palo Alto Networks
+- Palomar
+- PANDORA
+- Papa Johns International
+- Par Technology
+- Park National
+- Parker Hannifin
+- Parsons
+- PARTNERS
+- Patrick Industries
+- Patterson Companies
+- Paychex
+- Paycom Software
+- PayPal
+- PBF Energy
+- PDF Solutions
+- Peabody Energy
+- PEARSON
+- Pebblebrook Hotel Trust
+- Peloton
+- Penguin Solutions Inc
+- Penn
+- PENNON
+- PennyMac Financial Services
+- Pennymac Mortgage Invst
+- Pentair
+- Pepsi
+- Performance Food Company
+- PERNOD RICARD
+- PERSIMMON
+- Petrobras
+- Petrolera
+- Pfizer
+- PG
+- Philip Morris International
+- PHILIPS KON
+- Phillips 66
+- PHOENIX
+- Phreesia
+- Piedmont Office Realty Trust
+- Pinduoduo
+- Pinnacle West Capital
+- Pinterest
+- Piper Sandler
+- Pitney Bowes
+- PJT Partners
+- Plexus
+- PlugPower
+- Pnc Financial Services Group
+- PNM Resources
+- Pool
+- PORSCHE AUTOMOBIL PRF
+- Portland General Electric
+- POSTE ITALIANE
+- Power Integrations
+- PPG
+- PPL
+- PRA
+- Prestige Consumer Healthcare
+- Pricesmart
+- PRIMARY HEALTH PROPS REIT
+- Primo Wateroration
+- Primoris Services
+- Principal Financial Group
+- Privia Health
+- Proassuranceoration
+- PROG
+- Progress Software
+- Progressive
+- Progyny
+- Prologis
+- PROSIEBENSAT1 MEDIA
+- PROSUS
+- Protagonist Therapeutics
+- Prothenaoration
+- Proto Labs
+- Provident Financial Services
+- PROXIMUS
+- Prudential
+- Prudential PLC
+- PRYSMIAN
+- PSP SWISS PROPERTY
+- PTC
+- PTC Therapeutics
+- Public Service Enterprise Gp
+- Public Storage
+- PUBLICISE
+- Pulmonx
+- Pultegroup
+- PUMA
+- PZU
+- Q2
+- QIAGEN
+- QIUSD.lv
+- Qorvo
+- QT
+- QTUMUSD.lv
+- Quaker Houghton
+- Qualcom
+- Qualys
+- Quanta Services
+- Quanterix
+- Quantums
+- Quest Diagnostics
+- QUILTER
+- R1 RCM
+- Rackspace Technology
+- Radian
+- Radnet
+- RAIFFEISEN BANK INT
+- Ralph Lauren
+- Rambus
+- RANDSTAD
+- Range Resources
+- Ranpak
+- Rapid7
+- RATIONAL
+- Raymond James Financial
+- Raytheon
+- RAYUSD.lv
+- RBC Bearings
+- RBS
+- Ready Capital
+- Realtyome
+- RECATI INDUSTRIA CHIM FARMA
+- ReckittBen
+- Recursion Pharmaceuticals
+- Redwood Trust
+- Regency Centers
+- Regeneron
+- Regenxbio
+- Regions Financial
+- Relay Therapeutics
+- RELX
+- REMY COINTREAU
+- Renaissance IPO
+- Renasant
+- RENAULT
+- RENTOKIL INITIAL
+- Repayoration
+- Replimune
+- REPLY
+- REPSOL
+- Republic Services
+- Resideo Technologies
+- Resmed
+- Revolution Medicines
+- Revolve
+- REXEL
+- RHEINMETALL
+- RICHEMONT
+- Rigetti Computing Inc
+- RIGHTMOVE
+- RINGKJOBING LANDBOBANK
+- Riot Blockchain
+- RioTinto
+- Rivian Automotive
+- RLI
+- RLJ Lodging Trust
+- Robert Half
+- Robinhood
+- Roblox
+- ROCHE PAR
+- Rocket Pharmaceuticals
+- Rockwell Automation
+- ROCKWOOL INTERNATIONAL
+- Rogers
+- Roku
+- Rollins
+- RollsRoyce
+- Roper Technologies
+- Ross Stores
+- ROTORK
+- ROYAL UNIBREW
+- RoyalCarrib
+- RSRUSD.lv
+- RUBIS
+- Rush Enterprises
+- Rush Street Interactive
+- RUSS2000
+- RWE
+- Ryanair
+- Ryman Hospitality Properties
+- S and T Bancorp
+- S4 CAPITAL
+- Sabra Healthcare REIT
+- Sacyr SA
+- Safehold
+- SAFESTORE REIT
+- Safety Insurance
+- SAFRAN
+- SAGAX
+- SAGE
+- Saia
+- SAINSBURYJ
+- Salesforce
+- Sally Beauty
+- SALMAR
+- SAMPO
+- Sana Biotechnology
+- SANDUSD.lv
+- SANDVIK
+- Sangamo Therapeutics
+- Sanmina
+- Sanofi
+- Santander
+- SAP
+- SARTORIUS PRF
+- SARTORIUS STEDIM BIOTECH
+- SaudiETF
+- Saul Centers
+- SBA
+- SCHATZH6
+- SCHIBSTED
+- SCHINDLER P PAR
+- Schlumberger
+- SCHNEIDER ELECTRIC
+- Scholastic
+- SCHRODERS
+- Schrodinger
+- SCOR
+- SCOUT24
+- Seacoast Banking Of Florida
+- Seagate Technology
+- SealedAir
+- SEB
+- SECTRA
+- SECURITAS
+- Seer
+- SEGRO REIT
+- SEKJPY.pr
+- SEKJPY.x
+- Select Medicaloration
+- Selective Insurance
+- SelectQuote
+- Sempra Energy
+- Sensient Technologies
+- Serve Robotics
+- Service Properties Trust
+- Servicenow
+- ServisFirst Bancshares
+- SES FDR
+- SEVERN TRENT
+- SGDJPY.pr
+- SGDJPY.x
+- SGS
+- Shake Shack
+- Shell
+- Shenandoah Telecoms
+- Sherwin Williams
+- SHIBUSD.lv
+- Shoe Carnival
+- Shopify
+- Shutterstock
+- SIEGFRIED
+- Siemens
+- SIEMENS HEALTHINEERS
+- SIG COMBIBLOC
+- Signet Jewelers
+- SIGNIFY
+- SIK6
+- SIKA
+- Silicon Laboratories
+- Simmons First National
+- Simon Property Group
+- Simply Good Foods
+- Simpson Manufacturing
+- SINCH
+- Sinclair Broadcast
+- SING30H6
+- SiriusPoint
+- SITE Centers
+- SiTime
+- SJW
+- SKANDINAVISKA ENSK BKN
+- SKANSKA
+- SKF
+- SKLUSD.lv
+- Skyline Champion
+- Skywest
+- Skyworks Solutions
+- Sleep Number
+- SM Energy
+- SMITH
+- SMITH AND NEPHEW
+- SMITHS
+- SNAM
+- Snap
+- Snap On
+- SNXUSD.lv
+- SocGen
+- SODEXO
+- SOFINA
+- SOFTCAT
+- SOITEC
+- SolarEdge
+- SOLUSD.lv
+- SOLVAY
+- Sonic Automotive
+- Sonos
+- SONOVA
+- Sony
+- SOPRA STERIA
+- SoundHound
+- Southern
+- Southside Bancshares
+- SouthStateoration
+- Southwest Airlines
+- Southwest Gas
+- SP Global
+- SPDR SP Biotech
+- SPDR SP Kensho Clean Power
+- SPELLUSD.lv
+- SPIE
+- SPIRAX-SARCO ENGINEERING
+- Spire
+- Spotify
+- Sprouts Farmers Market
+- SPS Commerce
+- SPX
+- Square
+- SSE
+- SSGA Comm Services
+- SSGA Consumer Discretionary
+- SSGA Consumer Staples
+- SSGA Energy Sector
+- SSGA Fin Sector
+- SSGA Gold Shares
+- SSGA Health Care
+- SSGA Industrial Sector
+- SSGA Materials Sector
+- SSGA Real Estate Sector
+- SSGA SP Regional Banking
+- SSGA SP500 Trust
+- SSGA Tech Sector
+- SSGA Utilities Sector
+- St Joe
+- ST.JAMESS PLACE
+- Staar Surgical
+- STAG Industrial
+- STANDARD CHARTERED
+- Standard Motor Products
+- Standex International
+- Stanley Black Decker
+- Starbucks
+- State Street
+- Steel Dynamics
+- Stem
+- Stepan
+- StepStone
+- STERIS
+- Steven Madden
+- Stewart Information Services
+- STGUSD.lv
+- Stitch Fix
+- Stock Yards Bancorp
+- Stoneco
+- StoneX
+- STORA ENSO
+- STOREBRAND
+- STORJUSD.lv
+- Strategic Education
+- STRAUMANN
+- Stride
+- Stryker
+- Sturm Ruger and
+- STXUSD.lv
+- Sun Country Airlines
+- Sunnova Energy International
+- Sunstone Hotel Investors
+- Super Micro Computer
+- Supernus Pharmaceuticals
+- Surgery Partners
+- SUSHIUSD.lv
+- SVENSKA CELLU AKTI
+- SVENSKA HANDELSBANKEN
+- SWATCH
+- SWECO
+- SWEDBANK
+- SWEDISH ORPHAN BIOVITRUM
+- SWISS LIFE HLDG
+- SWISS PRIME SITE
+- SWISS RE AG
+- SWISS20Roll
+- SWISSCOM
+- SXPUSD.lv
+- SYMRISE
+- Synaptics
+- Synchrony Financial
+- Synopsys
+- Sysco
+- T Rowe Price Group
+- TAG IMMOBILIEN
+- TaiwanSemi
+- Take Two Interactive
+- Tapestry
+- Targa Resources
+- Target
+- TATE AND LYLE
+- Taylor
+- Taylor Morrison Home
+- TECAN
+- Techtarget
+- TEGNA
+- Teladoc
+- TELE2
+- TELECOM ITALIA
+- Teledyne Technologies
+- Teleflex
+- TELEFONICA
+- TELENOR
+- TELEPERFORMANCE
+- Telephone And Data Systems
+- Televisa
+- Telos
+- TEMENOS
+- Tenable
+- Tenaris
+- Tencent Music Entertainment
+- Tenet Healthcare
+- Tennant
+- Teradyne
+- Terawulf Inc
+- Terex
+- TERNA RETE ELEC NAZIONALE
+- Terreno Realty
+- Tesco
+- Tesla
+- Tetra Tech
+- Texas Capital Bancshares
+- Texas Instruments
+- Texas Roadhouse
+- Textron
+- TG Therapeutics
+- TGS
+- THALES
+- The Bank of N.T. Butterfield
+- The Cigna Group
+- Thermo Fisher Scientific
+- THETAUSD.lv
+- Thryv
+- THULE
+- THYSSENKRUPP
+- Tigo
+- TJX Companies
+- TMobile
+- Tompkins Financial
+- TOMRA SYSTEMS
+- TONCOINUSD.lv
+- Tonix Pharma
+- Tootsie Roll Industries
+- TOTALENERGIES
+- Townebank Portsmouth VA
+- Tractor Supplympany
+- Trane Technologies
+- Transdigm Group
+- Travelers
+- Travere Therapeutics
+- TRAVIS PERKINS
+- TRELLEBORG
+- Tri Pointe Homes
+- Trico Bancshares
+- Trimasoration
+- Trimble
+- TriNet
+- Trinseo
+- TRITAX BIG BOX REIT
+- Triumph
+- Tronox
+- Truist Financial
+- TRUMPUSD.lv
+- Trupanion
+- Trustmark
+- TRXUSD.lv
+- TRYG
+- TTEC
+- TTM Technologies
+- Twilio
+- Twist Bioscience
+- Two Harbors Investment
+- Tyler Technologies
+- Tyson Foods
+- U.S. Physical Therapy
+- UBER
+- UBISOFT ENTERTAIN
+- UBS
+- UCB
+- UDR
+- UK100H6
+- UK100Roll
+- UKOILK6
+- UKOILM6
+- UKOILRoll
+- UKOILRoll.micro
+- Ulta Beauty
+- Ultra Clean Hldgs
+- UMG
+- UMH Properties
+- UMICORE
+- UnHealth
+- UNICREDIT
+- Unifirst
+- Unilever
+- Union Pacific
+- Unisys
+- UNITE REIT
+- United Bankshares
+- United Community Banks
+- UNITED INTERNET
+- United Natural Foods
+- United Rentals
+- UNITED UTILITIES
+- UnitedAir
+- Uniti
+- UNIUSD.lv
+- Universal
+- Universal Health Services
+- UPM-KYMMENE
+- UPS
+- Upwork
+- Urban Edge Properties
+- Urban Outfitters
+- US Bancorp
+- US Cellularoration
+- US Global Jets
+- US30H6
+- US30Roll
+- US500H6
+- US500Roll
+- Usana Health Sciences
+- USCOCOAK6
+- USCOCOARoll
+- USDAED.pr
+- USDAED.x
+- USDCAD.pr
+- USDCAD.x
+- USDCHF.pr
+- USDCHF.x
+- USDCNH.pr
+- USDCNH.x
+- USDHKD.pr
+- USDHKD.x
+- USDINDEXH6
+- USDJOD.pr
+- USDJPY.pr
+- USDJPY.x
+- USDKES.pr
+- USDMXN.pr
+- USDMXN.x
+- USDNOK.pr
+- USDNOK.x
+- USDPLN.pr
+- USDPLN.x
+- USDSEK.pr
+- USDSEK.x
+- USDSGD.pr
+- USDSGD.x
+- USDZAR.pr
+- USDZAR.x
+- USFANGINDEXH5
+- USFANGINDEXH6
+- USOILJ6
+- USOILK6
+- USOILRoll
+- USOILRoll.micro
+- USSteel
+- UT100H6
+- UT100Roll
+- Utz Brands
+- Vale
+- VALEO
+- Valero Energy
+- Valley National Bancorp
+- VALMET OYJ
+- VanEck Vectors Earth Metals
+- Vanguard EM Stocks Index
+- Vanguard FTSE Europe
+- Vanguard Growth
+- Vanguard InfoTech
+- Vanguard Intermediate Corp Bond
+- Vanguard Mega Cap
+- Vanguard Mid-Cap
+- Vanguard Real Estate Index
+- Vanguard Small Cap Index
+- Vanguard Small-cap Grwth
+- Vanguard SP500
+- Vanguard ST Bond Index
+- Vanguard Tot Stock Mrkt
+- Vanguard Total Bond Mkt
+- Vanguard Utilities
+- Vanguard Value Index
+- Varex Imaging
+- Varonis Systems
+- VAT
+- Vaxcyte
+- Vector
+- Veeco Instruments
+- Ventas
+- VEOLIA ENVIRONNEMENT VE
+- Veracyte
+- VERBUND
+- Vericel
+- Verint Systems
+- Verisign
+- Verisk Analytics
+- Verizon
+- Verra Mobility
+- Vertex
+- VESTAS WIND SYSTEMS
+- VF
+- VGalactic
+- Viatris
+- Viavi Solutions
+- Vici Properties
+- Vicor
+- Victorias Secret
+- VICTREX
+- VINCI
+- Vir Biotechnology
+- Visa
+- Vishay Intertechnology
+- Vista Outdoor
+- Visteon
+- VISTRY
+- VITROLIFE
+- VIVENDI
+- VIXH6
+- VIXRoll
+- Vodafone
+- VOESTALPINE
+- VOLVO
+- VOLVO CAR
+- VONOVIA
+- VOPAK
+- Vulcan Materials
+- VW
+- W R Berkley
+- Wabtec
+- Walgreens Boots Alliance
+- Walker and Dunlop
+- Walmart
+- Warner Bros Discovery
+- Warrior Met Coal
+- WARTSILA
+- Washington Federal
+- Waste Management
+- WATCHES OF SWITZERLAND
+- Waters
+- Watts Water Technologies
+- Wayfair
+- WD-40
+- WDP REIT
+- WEC Energy Group
+- WEIR
+- Weis Markets
+- WellsFargo
+- Welltower
+- WENDEL
+- Werner Enterprises
+- Wesbanco
+- Wesco International
+- West Pharmaceutical Services
+- Westamerica Bancorporation
+- Western Digital
+- Weyerhaeuser
+- Whirlpool
+- WHITBREAD
+- WideOpenWest
+- WIENERBERGER
+- WIHLBORGS FASTIGHETER
+- Williamss
+- Willis Towers Watson
+- WillScot Mobile Mini
+- Wingstop
+- Winnebago Industries
+- Wipro
+- WISE CL A
+- WIZZ AIR
+- WOLTERS KLUWER
+- Wolverine World Wide
+- Workday
+- Workhorse
+- Workiva
+- World Acceptance
+- World Kinect
+- WORLDLINE
+- Worthington Industries
+- WPP
+- WW Grainger
+- WW International
+- Wynn Resorts
+- XAGEUR.pr
+- XAGEUR.x
+- XAGUSD.pr
+- XAGUSD.x
+- XAUAED.pr
+- XAUAED.x
+- XAUAUD.pr
+- XAUAUD.x
+- XAUCNH.pr
+- XAUCNH.x
+- XAUEUR.pr
+- XAUEUR.x
+- XAUGBP.pr
+- XAUGBP.x
+- XAUJPY.pr
+- XAUJPY.x
+- XAUUSD.pr
+- XAUUSD.x
+- Xcel Energy
+- Xencor
+- Xenia Hotels and Resorts
+- XLMUSD.lv
+- XPEL
+- Xpeng
+- XPTUSD.pr
+- XPTUSD.x
+- XRPUSD.lv
+- XTZUSD.lv
+- Xylem
+- YARA INTERNATIONAL
+- Yelp
+- Yext
+- YFIUSD.lv
+- Yum Brands
+- ZALANDO
+- Zebra Technologies
+- Zentalis Pharmaceuticals
+- ZILUSD.lv
+- Zimmer Biomet
+- Zions Bancorp Na
+- Zoetis
+- Zoom
+- ZRXUSD.lv
+- Zscaler
+- ZURICH INSURANCE

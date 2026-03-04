@@ -12,7 +12,7 @@
       <header class="header">
         <div>
           <h1>MT5 Market Data Console</h1>
-          <p>Secure WebSocket stream for multi‑symbol ticks and OHLC.</p>
+          <p>Secure WebSocket stream for multi-symbol ticks and OHLC.</p>
         </div>
         <div class="status">
           <span class="dot" id="statusDot"></span>
@@ -44,13 +44,29 @@
         <div class="actions">
           <button id="generateKeyBtn" class="ghost">Request Secret Key</button>
         </div>
+        <div class="field">
+          <label>Manage Symbols (CSV)</label>
+          <input id="manageSymbols" placeholder="USDJPY,XAUUSD" />
+        </div>
+        <div class="actions">
+          <button id="subscribeBtn" class="ghost" disabled>Subscribe</button>
+          <button id="unsubscribeBtn" class="ghost" disabled>Unsubscribe</button>
+          <button id="replaceBtn" class="ghost" disabled>Set Symbols</button>
+        </div>
+        <div class="actions">
+          <button id="clearSymbolsBtn" class="ghost" disabled>Clear Symbols</button>
+        </div>
+        <div class="field full">
+          <label>Active Symbols</label>
+          <div id="activeSymbols" class="chip-list"></div>
+        </div>
       </section>
 
       <section class="table">
         <div class="table-head">
           <h2>Live Market Data</h2>
           <div class="meta">
-            <span id="lastUpdate">Last update: —</span>
+            <span id="lastUpdate">Last update: -</span>
           </div>
         </div>
         <div class="table-wrap">

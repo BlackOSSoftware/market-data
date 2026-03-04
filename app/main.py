@@ -1,8 +1,9 @@
 import asyncio
 import json
 import secrets
+from contextlib import suppress
 from pathlib import Path
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, WebSocket, WebSocketDisconnect
@@ -146,10 +147,30 @@ def request_key() -> JSONResponse:
     return JSONResponse({"api_key": new_key})
 
 
+def _normalize_symbols(values: List[str]) -> List[str]:
+    normalized: List[str] = []
+    seen = set()
+    for value in values:
+        symbol = value.strip().upper()
+        if not symbol or symbol in seen:
+            continue
+        seen.add(symbol)
+        normalized.append(symbol)
+    return normalized
+
+
 def _parse_symbols(raw: Optional[str]) -> List[str]:
     if not raw:
         return []
-    return [s.strip().upper() for s in raw.split(",") if s.strip()]
+    return _normalize_symbols(raw.split(","))
+
+
+def _parse_symbols_payload(raw: Any) -> List[str]:
+    if isinstance(raw, str):
+        return _parse_symbols(raw)
+    if isinstance(raw, list):
+        return _normalize_symbols([item for item in raw if isinstance(item, str)])
+    return []
 
 
 def _parse_interval(raw: Optional[str], default_ms: int) -> int:
@@ -162,6 +183,164 @@ def _parse_interval(raw: Optional[str], default_ms: int) -> int:
     if value < 0:
         return default_ms
     return value
+
+
+def _control_state(symbol_list: List[str], interval_ms: int) -> Dict[str, Any]:
+    return {
+        "symbols": list(symbol_list),
+        "interval_ms": interval_ms,
+    }
+
+
+async def _handle_ws_control_message(
+    websocket: WebSocket,
+    raw_message: str,
+    symbol_list: List[str],
+    interval_ms: int,
+) -> int:
+    try:
+        payload = json.loads(raw_message)
+    except json.JSONDecodeError:
+        await websocket.send_text(
+            json.dumps(
+                {
+                    "type": "control_error",
+                    "error": "invalid_json",
+                    "message": "Send JSON control messages.",
+                }
+            )
+        )
+        return interval_ms
+
+    if not isinstance(payload, dict):
+        await websocket.send_text(
+            json.dumps(
+                {
+                    "type": "control_error",
+                    "error": "invalid_message",
+                    "message": "Control message must be a JSON object.",
+                }
+            )
+        )
+        return interval_ms
+
+    action = str(payload.get("action") or payload.get("type") or "").strip().lower()
+    if not action:
+        await websocket.send_text(
+            json.dumps(
+                {
+                    "type": "control_error",
+                    "error": "action_required",
+                    "message": "Use action: subscribe, unsubscribe, set_symbols, set_interval, get_state.",
+                }
+            )
+        )
+        return interval_ms
+
+    if action in {"ping", "heartbeat"}:
+        await websocket.send_text(json.dumps({"type": "pong"}))
+        return interval_ms
+
+    if action in {"get_state", "state"}:
+        await websocket.send_text(
+            json.dumps(
+                {
+                    "type": "subscription_state",
+                    **_control_state(symbol_list, interval_ms),
+                }
+            )
+        )
+        return interval_ms
+
+    if action == "set_interval":
+        raw_interval = payload.get("interval_ms")
+        if raw_interval is None:
+            await websocket.send_text(
+                json.dumps(
+                    {
+                        "type": "control_error",
+                        "error": "interval_required",
+                        "message": "Provide interval_ms for set_interval action.",
+                    }
+                )
+            )
+            return interval_ms
+
+        interval_ms = _parse_interval(str(raw_interval), interval_ms)
+        await websocket.send_text(
+            json.dumps(
+                {
+                    "type": "interval_updated",
+                    **_control_state(symbol_list, interval_ms),
+                }
+            )
+        )
+        return interval_ms
+
+    if action in {"subscribe", "unsubscribe", "set_symbols"}:
+        requested = _parse_symbols_payload(payload.get("symbols"))
+        if action != "set_symbols" and not requested:
+            await websocket.send_text(
+                json.dumps(
+                    {
+                        "type": "control_error",
+                        "error": "symbols_required",
+                        "message": "Provide symbols as CSV string or array.",
+                    }
+                )
+            )
+            return interval_ms
+
+        previous = list(symbol_list)
+        previous_set = set(previous)
+
+        if action == "subscribe":
+            existing_set = set(previous)
+            for symbol in requested:
+                if symbol not in existing_set:
+                    symbol_list.append(symbol)
+                    existing_set.add(symbol)
+        elif action == "unsubscribe":
+            remove_set = set(requested)
+            symbol_list[:] = [symbol for symbol in symbol_list if symbol not in remove_set]
+        else:  # set_symbols
+            symbol_list[:] = requested
+
+        current_set = set(symbol_list)
+        added = [symbol for symbol in symbol_list if symbol not in previous_set]
+        removed = [symbol for symbol in previous if symbol not in current_set]
+
+        await websocket.send_text(
+            json.dumps(
+                {
+                    "type": "subscription_updated",
+                    "action": action,
+                    "added": added,
+                    "removed": removed,
+                    **_control_state(symbol_list, interval_ms),
+                }
+            )
+        )
+        return interval_ms
+
+    await websocket.send_text(
+        json.dumps(
+            {
+                "type": "control_error",
+                "error": "unsupported_action",
+                "message": "Supported actions: subscribe, unsubscribe, set_symbols, set_interval, get_state.",
+            }
+        )
+    )
+    return interval_ms
+
+
+def _next_tick_delay(interval_ms: int, has_symbols: bool) -> float:
+    if not has_symbols:
+        return 3600.0
+    if interval_ms > 0:
+        return interval_ms / 1000.0
+    return 0.0
 
 
 @app.websocket("/ws/market")
@@ -180,29 +359,91 @@ async def ws_market(
         return
 
     symbol_list = _parse_symbols(symbols)
-    if not symbol_list:
-        await websocket.send_text(json.dumps({"error": "symbols_required"}))
-        await websocket.close(code=1003)
-        return
-
     tf = settings.default_timeframe
     interval = _parse_interval(interval_ms, settings.default_interval_ms)
+    receive_task: Optional[asyncio.Task[str]] = None
+    tick_task: Optional[asyncio.Task[None]] = None
 
     try:
+        await websocket.send_text(
+            json.dumps({"type": "subscription_state", **_control_state(symbol_list, interval)})
+        )
+
+        receive_task = asyncio.create_task(websocket.receive_text())
+        tick_task = asyncio.create_task(
+            asyncio.sleep(_next_tick_delay(interval, bool(symbol_list)))
+        )
+
         while True:
-            payload = []
-            for symbol in symbol_list:
-                data = await asyncio.to_thread(mt5_client.fetch_market_data, symbol, tf)
-                if data is not None:
-                    payload.append(data)
-                else:
-                    payload.append({"symbol": symbol, "error": "symbol_unavailable"})
+            assert receive_task is not None
+            assert tick_task is not None
 
-            await websocket.send_text(json.dumps({"data": payload}))
+            done, _ = await asyncio.wait(
+                {receive_task, tick_task},
+                return_when=asyncio.FIRST_COMPLETED,
+            )
 
-            if interval > 0:
-                await asyncio.sleep(interval / 1000.0)
-            else:
-                await asyncio.sleep(0)
-    except WebSocketDisconnect:
+            receive_done = receive_task in done
+            tick_done = tick_task in done
+
+            if receive_done:
+                try:
+                    raw_message = receive_task.result()
+                except (WebSocketDisconnect, RuntimeError):
+                    return
+
+                interval = await _handle_ws_control_message(
+                    websocket=websocket,
+                    raw_message=raw_message,
+                    symbol_list=symbol_list,
+                    interval_ms=interval,
+                )
+
+                receive_task = asyncio.create_task(websocket.receive_text())
+
+                if not tick_done:
+                    tick_task.cancel()
+                    with suppress(asyncio.CancelledError):
+                        await tick_task
+                    tick_task = asyncio.create_task(
+                        asyncio.sleep(_next_tick_delay(interval, bool(symbol_list)))
+                    )
+
+            if tick_done:
+                if symbol_list:
+                    payload = []
+                    for symbol in symbol_list:
+                        data = await asyncio.to_thread(
+                            mt5_client.fetch_market_data, symbol, tf
+                        )
+                        if data is not None:
+                            payload.append(data)
+                        else:
+                            payload.append({"symbol": symbol, "error": "symbol_unavailable"})
+
+                    await websocket.send_text(
+                        json.dumps(
+                            {
+                                "type": "market_data",
+                                "symbols": list(symbol_list),
+                                "data": payload,
+                            }
+                        )
+                    )
+
+                tick_task = asyncio.create_task(
+                    asyncio.sleep(_next_tick_delay(interval, bool(symbol_list)))
+                )
+    except (WebSocketDisconnect, RuntimeError):
         return
+    finally:
+        if receive_task is not None and not receive_task.done():
+            receive_task.cancel()
+        if tick_task is not None and not tick_task.done():
+            tick_task.cancel()
+        if receive_task is not None:
+            with suppress(asyncio.CancelledError, WebSocketDisconnect, RuntimeError):
+                await receive_task
+        if tick_task is not None:
+            with suppress(asyncio.CancelledError):
+                await tick_task
