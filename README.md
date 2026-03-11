@@ -78,6 +78,17 @@ Server updates:
 - `interval_updated`
 - `control_error` (invalid action/message)
 
+## Historical Candles (REST)
+Endpoint:
+`http://<server-ip>:8000/api/history?symbol=EURUSD&resolution=15&count=500&key=YOUR_KEY`
+
+Response example:
+```json
+[
+  { "time": 1710000000, "open": 1.0842, "high": 1.0850, "low": 1.0831, "close": 1.0846, "volume": 120.0 }
+]
+```
+
 ## Notes
 - `interval_ms=0` pe loop without delay chalega, lekin OS + MT5 limits ke wajah se "0ms" guarantee nahi hota.
 - Price values broker ke `digits/tick_size` ke basis par normalize hote hain; long float artifacts avoid kiye gaye hain.

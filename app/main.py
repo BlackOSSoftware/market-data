@@ -1,12 +1,13 @@
 import asyncio
 import json
 import secrets
+from datetime import datetime, timezone
 from contextlib import suppress
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, Header, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, Header, Query, WebSocket, WebSocketDisconnect
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 try:
@@ -128,6 +129,33 @@ def symbols() -> JSONResponse:
     return JSONResponse({"symbols": names})
 
 
+@app.get("/api/history")
+def history(
+    symbol: str = Query(...),
+    timeframe: Optional[str] = None,
+    resolution: Optional[str] = None,
+    count: Optional[int] = None,
+    from_: Optional[str] = Query(default=None, alias="from"),
+    to_: Optional[str] = Query(default=None, alias="to"),
+    key: Optional[str] = None,
+    x_api_key: Optional[str] = Header(default=None),
+) -> JSONResponse:
+    api_key = key or x_api_key or ""
+    if not _is_valid_api_key(api_key):
+        return JSONResponse({"error": "invalid_api_key"}, status_code=401)
+
+    tf = (resolution or timeframe or settings.default_timeframe or "M1").strip()
+    count_value = _clamp_history_count(count, 500)
+    from_ts = _parse_timestamp(from_)
+    to_ts = _parse_timestamp(to_)
+
+    mt5_client.connect()
+    candles = mt5_client.fetch_history(symbol, tf, count_value, from_ts, to_ts)
+    if candles is None:
+        return JSONResponse({"error": "symbol_unavailable"}, status_code=404)
+    return JSONResponse(candles)
+
+
 @app.post("/api/keys/generate")
 def generate_key(x_admin_key: Optional[str] = Header(default=None)) -> JSONResponse:
     admin_key = settings.admin_key
@@ -182,6 +210,38 @@ def _parse_interval(raw: Optional[str], default_ms: int) -> int:
         return default_ms
     if value < 0:
         return default_ms
+    return value
+
+
+def _parse_timestamp(raw: Optional[str]) -> Optional[int]:
+    if raw is None:
+        return None
+    try:
+        value = float(raw)
+        if value > 10_000_000_000:
+            value = value / 1000.0
+        return int(value)
+    except (TypeError, ValueError):
+        pass
+    try:
+        cleaned = str(raw).replace("Z", "+00:00")
+        parsed = datetime.fromisoformat(cleaned)
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return int(parsed.timestamp())
+    except (TypeError, ValueError):
+        return None
+
+
+def _clamp_history_count(raw: Optional[int], default_count: int = 500) -> int:
+    try:
+        value = int(raw) if raw is not None else default_count
+    except (TypeError, ValueError):
+        value = default_count
+    if value < 500:
+        value = 500
+    if value > 2000:
+        value = 2000
     return value
 
 

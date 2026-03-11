@@ -31,6 +31,34 @@ _TIMEFRAMES = {
     "D1": mt5.TIMEFRAME_D1,
     "W1": mt5.TIMEFRAME_W1,
     "MN1": mt5.TIMEFRAME_MN1,
+    "1": mt5.TIMEFRAME_M1,
+    "2": mt5.TIMEFRAME_M2,
+    "3": mt5.TIMEFRAME_M3,
+    "4": mt5.TIMEFRAME_M4,
+    "5": mt5.TIMEFRAME_M5,
+    "6": mt5.TIMEFRAME_M6,
+    "10": mt5.TIMEFRAME_M10,
+    "12": mt5.TIMEFRAME_M12,
+    "15": mt5.TIMEFRAME_M15,
+    "20": mt5.TIMEFRAME_M20,
+    "30": mt5.TIMEFRAME_M30,
+    "45": mt5.TIMEFRAME_H1,
+    "60": mt5.TIMEFRAME_H1,
+    "120": mt5.TIMEFRAME_H2,
+    "180": mt5.TIMEFRAME_H3,
+    "240": mt5.TIMEFRAME_H4,
+    "360": mt5.TIMEFRAME_H6,
+    "480": mt5.TIMEFRAME_H8,
+    "720": mt5.TIMEFRAME_H12,
+    "D": mt5.TIMEFRAME_D1,
+    "1D": mt5.TIMEFRAME_D1,
+    "DAY": mt5.TIMEFRAME_D1,
+    "W": mt5.TIMEFRAME_W1,
+    "1W": mt5.TIMEFRAME_W1,
+    "WEEK": mt5.TIMEFRAME_W1,
+    "M": mt5.TIMEFRAME_MN1,
+    "1M": mt5.TIMEFRAME_MN1,
+    "MN": mt5.TIMEFRAME_MN1,
 }
 
 
@@ -42,6 +70,9 @@ class MT5Client:
         self._cache_lock = Lock()
         self._resolved_symbols: Dict[str, str] = {}
         self._symbol_specs: Dict[str, Dict[str, Any]] = {}
+        self._history_cache: Dict[str, Dict[str, Any]] = {}
+        self._history_cache_ttl = 2.0
+        self._history_cache_max = 256
 
     def connect(self) -> None:
         if self._connected:
@@ -183,6 +214,100 @@ class MT5Client:
         scaled = int(round(numeric * scale))
         normalized = int(round(scaled / tick_steps)) * tick_steps
         return normalized / scale
+
+    def _get_history_cache(self, key: str) -> Optional[list[dict[str, Any]]]:
+        now = time.monotonic()
+        with self._cache_lock:
+            entry = self._history_cache.get(key)
+        if not entry:
+            return None
+        age = now - entry["ts"]
+        if age <= self._history_cache_ttl:
+            return entry["data"]
+        with self._cache_lock:
+            current = self._history_cache.get(key)
+            if current and current.get("ts") == entry["ts"]:
+                self._history_cache.pop(key, None)
+        return None
+
+    def _set_history_cache(self, key: str, data: list[dict[str, Any]]) -> None:
+        now = time.monotonic()
+        with self._cache_lock:
+            self._history_cache[key] = {"ts": now, "data": data}
+            if len(self._history_cache) <= self._history_cache_max:
+                return
+            oldest_key = min(self._history_cache.items(), key=lambda item: item[1]["ts"])[0]
+            self._history_cache.pop(oldest_key, None)
+
+    def fetch_history(
+        self,
+        symbol: str,
+        timeframe: str,
+        count: int,
+        from_ts: Optional[int] = None,
+        to_ts: Optional[int] = None,
+    ) -> Optional[list[dict[str, Any]]]:
+        actual = self.resolve_symbol(symbol)
+        if not actual or not self.ensure_symbol(actual):
+            return None
+        spec = self._get_symbol_spec(actual)
+        if spec is None:
+            return None
+
+        tf = self.get_timeframe(timeframe)
+        safe_count = max(int(count or 0), 1)
+        cache_key = f"{actual}:{tf}:{safe_count}"
+        cached = self._get_history_cache(cache_key)
+        if cached is not None:
+            return cached
+
+        rates = mt5.copy_rates_from_pos(actual, tf, 0, safe_count)
+
+        if rates is None or len(rates) == 0:
+            return []
+
+        candles = []
+        for row in rates:
+            try:
+                ts = int(row["time"])
+            except (TypeError, ValueError, KeyError):
+                continue
+            try:
+                open_raw = row["open"]
+                high_raw = row["high"]
+                low_raw = row["low"]
+                close_raw = row["close"]
+            except (TypeError, KeyError, IndexError):
+                continue
+            open_value = self._normalize_price(open_raw, spec)
+            high_value = self._normalize_price(high_raw, spec)
+            low_value = self._normalize_price(low_raw, spec)
+            close_value = self._normalize_price(close_raw, spec)
+            if open_value is None or high_value is None or low_value is None or close_value is None:
+                continue
+            try:
+                volume = row["real_volume"]
+            except (TypeError, KeyError, IndexError):
+                volume = None
+            if volume is None:
+                try:
+                    volume = row["tick_volume"]
+                except (TypeError, KeyError, IndexError):
+                    volume = 0
+            candles.append(
+                {
+                    "time": ts,
+                    "open": open_value,
+                    "high": high_value,
+                    "low": low_value,
+                    "close": close_value,
+                    "volume": float(volume) if volume is not None else 0.0,
+                }
+            )
+
+        candles.sort(key=lambda item: item["time"])
+        self._set_history_cache(cache_key, candles)
+        return candles
 
     def fetch_market_data(self, symbol: str, timeframe: str) -> Optional[Dict[str, Any]]:
         actual = self.resolve_symbol(symbol)
